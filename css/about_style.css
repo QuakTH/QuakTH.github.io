@@ -1,8 +1,276 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
+@import url('https://fonts.googleapis.com/css?family=Nanum+Pen+Script|Noto+Sans+KR');
+@import url('https://fonts.googleapis.com/css?family=Gamja+Flower');
+
 #about {
+    padding: 0;
     width: 65%;
-    height: 100%;
+    height: 65%;
     margin-left: auto;
     margin-right: auto;
     background-color: #c4dff6;
     margin-top: 3px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 60%;
+    left: 50%;
+}
+
+#about:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+#about > div {
+    height: 100%;
+    float: left;
+    margin: 0;
+}
+
+.description_box {
+    width: 90%;
+    display: none;
+}
+
+.description_box:nth-of-type(2) {
+    display: block;
+}
+
+.description_box:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.description_box > div {
+    margin: 0;
+    width: calc(50% - 0.5px);
+    height: 100%;
+    float: left;
+}
+
+.description_box > .border {
+    width: 1px;
+    background-color: #a7c1d8;
+}
+
+.arrow {
+    width: 5%;
+    background-color: #cecece;
+    font-size: 40px;
+    opacity: 0.5;
+    /*드래그 방지*/
+    -ms-user-select: none;
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    position: relative;
+}
+
+.arrow > span {
+    margin: 0;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+.arrow:hover {
+    opacity: 1;
+}
+
+/*.description.english.welcome {*/
+/*background-color: red;*/
+/*}*/
+
+/*.description.korean.welcome {*/
+/*background-color: orange;*/
+/*}*/
+
+/*.myself {*/
+/*background-color: blue;*/
+/*}*/
+
+/*.profile {*/
+/*background-color: yellow;*/
+/*}*/
+
+.description {
+    position: relative;
+}
+
+.description > h3 {
+    font-family: 'Noto Sans KR', sans-serif;
+    text-align: center;
+    font-size: 200%;
+    font-weight: bold;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    top: 15%;
+    left: 50%;
+}
+
+.myself > h3:nth-of-type(1) {
+    top: 5%;
+}
+
+.myself > h3:nth-of-type(2) {
+    top: 50%;
+}
+
+.description > div {
+    margin: 0;
+    padding: 10px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Nanum Pen Script', cursive;
+    position: absolute;
+    width: calc(100% - 20px);
+    top: 30%;
+    height: 50%;
+    font-size: 180%;
+    word-wrap: break-word;
+}
+
+#about > #slide_num {
+    width: 100px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #cde8ff;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    bottom: 1%;
+    left: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#about > #slide_num > div {
+    margin: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: #a7c1d8;
+}
+
+#about > #slide_num > .selected {
+    background-color: #7d94ab;
+}
+
+.myself > .primary {
+    position: absolute;
+    top: 15%;
+    height: 20%;
+    padding: 10px;
+    width: calc(100% - 20px);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.primary > div > img {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.primary > div {
+    margin: 0;
+    width: 50px;
+    height: 50px;
+}
+
+.myself > .secondary {
+    position: absolute;
+    top: 60%;
+    height: 20%;
+    padding: 10px;
+    width: calc(100% - 20px);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.secondary > div > img {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.secondary > div {
+    margin: 0;
+    width: 50px;
+    height: 50px;
+}
+
+.primary > div, .secondary > div {
+    position: relative;
+    cursor: pointer;
+}
+
+.lan_description {
+    margin: 0;
+    font-family: 'Gamja Flower', cursive;
+    font-size: 20px;
+    width: 150px;
+    height: 55px;
+    padding: 15px;
+    background-color: #e7e7e7;
+    font-weight: bold;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: -100%;
+    display: none;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.primary > div:hover > div, .secondary > div:hover > div {
+    display: block;
+}
+
+.profile > h3:nth-of-type(1) {
+    top: 5%;
+}
+
+.profile > h3:nth-of-type(2) {
+    top: 50%;
+}
+
+.profile > .reside {
+    position: absolute;
+    top: 20%;
+    height: 20%;
+    padding: 10px;
+    width: calc(100% - 20px);
+    text-align: center;
+    font-size: 300%;
+    font-family: 'Gamja Flower', cursive;
+}
+
+.profile > .contact {
+    position: absolute;
+    top: 60%;
+    height: 20%;
+    padding: 10px;
+    width: calc(100% - 20px);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.contact > div {
+    margin: 0;
+    width: 50px;
+    height: 50px;
+}
+
+.contact > div > a > img {
+    width: 100%;
+    height: 100%;
 }
